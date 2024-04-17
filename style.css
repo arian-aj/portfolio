@@ -1,11 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+  color: red;
 }
 
-body {
-    background-image: linear-gradient(30deg, skyblue, purple, skyblue);
-    height: 100vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+/*# sourceMappingURL=style.css.map */
