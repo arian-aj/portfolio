@@ -40,6 +40,13 @@ body header {
   backdrop-filter: blur(10px);
   z-index: 2;
 }
+@media (min-width: 768px) {
+  body header {
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 body header nav {
   width: 350px;
   display: flex;
@@ -91,6 +98,12 @@ main #intro {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+@media (min-width: 768px) {
+  main #intro {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 main #intro div {
   width: 400px;
