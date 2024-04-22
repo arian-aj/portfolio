@@ -18,9 +18,10 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 500px;
+  padding-top: 1000px;
   animation-name: moveBackground;
   animation-duration: 20s;
   animation-timing-function: linear;
@@ -28,12 +29,10 @@ body {
 }
 body header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   align-items: center;
   color: #94C5CC;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: rgba(128, 128, 128, 0.349);
   position: fixed;
   height: 80px;
@@ -42,35 +41,133 @@ body header {
   z-index: 2;
 }
 body header nav {
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 }
 body header nav a {
   text-decoration: none;
-  color: #8A4FFF;
+  color: white;
   font-weight: 600;
   transition: border-bottom 0.2s ease-in 0s;
 }
 body header nav a:hover {
-  border-bottom: 3px solid #8A4FFF;
+  border-bottom: 3px solid white;
+}
+body footer {
+  display: flex;
+  color: #8A4FFF;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(128, 0, 128, 0.315);
+  backdrop-filter: blur(5px);
+  border-top: 2px solid rgba(0, 0, 0, 0.274);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body footer .fa-brands {
+  color: #94C5CC;
+  font-size: 30px;
+  margin-top: 10px;
+}
+body footer .fa-brands:hover {
+  text-shadow: #8A4FFF 0px 0px 10px;
 }
 
 main {
-  width: 90%;
+  width: 100%;
   color: white;
   backdrop-filter: blur(2px);
+  background-color: rgba(128, 0, 128, 0.315);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1200px;
 }
 main #intro {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 main #intro div {
   width: 500px;
 }
+main #intro div h1 {
+  font-size: 50px;
+  text-align: center;
+}
+main #intro div h1 span {
+  color: #8A4FFF;
+}
+main #intro div h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #94C5CC;
+  text-transform: uppercase;
+  animation-name: textAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 main #intro img {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
+}
+main #about {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+}
+main #about h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+main #about h1 span {
+  color: #8A4FFF;
+}
+main #about p {
+  font-size: 20px;
+}
+main #about p span {
+  color: #8A4FFF;
+}
+main #projects {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main #projects h1 {
+  color: #8A4FFF;
+  font-size: 50px;
+  margin: 40px;
+}
+main #projects :nth-child(2) {
+  color: red;
+}
+main #contacts {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+main #contacts a {
+  color: #8A4FFF;
+  text-decoration: none;
+}
+main #contacts a:hover {
+  border-bottom: 2px solid #8A4FFF;
 }
 
 @keyframes moveBackground {
@@ -79,6 +176,17 @@ main #intro img {
   }
   100% {
     background-position: 0 0;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

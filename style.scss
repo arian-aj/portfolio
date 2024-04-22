@@ -22,9 +22,10 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 500px;
+    padding-top: 1000px;
     animation-name: moveBackground;
     animation-duration: 20s;
     animation-timing-function: linear;
@@ -32,12 +33,11 @@ body {
 
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         align-items: center;
         color: $color-secondary;
-        padding-left: 20px;
-        padding-right: 20px;
+
         background-color: rgba(128, 128, 128, 0.349);
         position: fixed;
         height: 80px;
@@ -46,18 +46,18 @@ body {
         z-index: 2;
 
         nav { 
-            width: 300px;
+            width: 350px;
             display: flex;
             justify-content: space-between;
 
             a{
                 text-decoration: none;
-                color: #8A4FFF;
+                color: white;
                 font-weight: 600;
                 transition: border-bottom 0.2s ease-in 0s;
 
                 &:hover {
-                    border-bottom: 3px solid $color-primary;
+                    border-bottom: 3px solid white;
 
 
 
@@ -69,29 +69,149 @@ body {
 
         } 
     }
+
+    footer {
+        display: flex;
+        color: $color-primary;
+        width: 100%;
+        min-height: 100px;
+        background-color: rgba(128, 0, 128, 0.315);
+        backdrop-filter: blur(5px);
+        border-top: 2px solid rgba(0, 0, 0, 0.274);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .fa-brands {
+            color: $color-secondary;
+            font-size: 30px;
+            margin-top: 10px;
+            
+            &:hover {
+                text-shadow: #8A4FFF 0px 0px 10px;
+            }
+        }
+        
+
+    }
 }
 
     main {
-        width: 90%;
+        width: 100%;
         color: white;
         backdrop-filter: blur(2px);
+        background-color: rgba(128, 0, 128, 0.315);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1200px;
 
         #intro {
             display: flex;
             flex-direction: column;
-            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
 
             div {
                 width: 500px;
+
+                h1 {
+                    font-size: 50px;
+                    text-align: center;
+
+                    span {
+                        color: $color-primary;
+                    }
+                }
+
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
+                    color: $color-secondary;
+                    text-transform: uppercase;
+                    animation-name: textAnimation;
+                    animation-duration: 5s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                }
             
             }
 
             img {
-                width: 500px;
-                height: 500px;
+                width: 400px;
+                height: 400px;
             }
         }
+
+        #about {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+
+            h1 {
+                font-size: 50px;
+                margin-bottom: 30px;
+                
+                span {
+                    color: $color-primary;
+                }
+            }
+
+            p {
+                font-size: 20px;
+
+                span {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        #projects {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            h1 {
+                color: $color-primary;
+                font-size: 50px;
+                margin: 40px;
+            }
+
+            :nth-child(2) {
+                color: red;
+            }
+        }
+
+        #contacts {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+
+            a {
+                color: $color-primary;
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: 2px solid $color-primary;
+                }
+            }
+
+        }
     }
+
+
 
 
 @keyframes moveBackground {
@@ -105,4 +225,18 @@ body {
             
     }
 
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
