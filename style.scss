@@ -44,6 +44,7 @@ body {
         height: 80px;
         top: 0;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         z-index: 2;
 
         @media (min-width: 768px) {
@@ -93,6 +94,7 @@ body {
         min-height: 100px;
         background-color: rgba(128, 0, 128, 0.315);
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         border-top: 2px solid rgba(0, 0, 0, 0.274);
         flex-direction: column;
         justify-content: center;
@@ -292,6 +294,7 @@ body {
                     height: 90px;
                     width: 90px;
                     backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
                     display: flex;
                     justify-content: center;
                     align-items: center;
