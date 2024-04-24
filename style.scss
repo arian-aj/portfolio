@@ -327,7 +327,7 @@ body {
                     transition-property: all;
                     transition-timing-function: linear;
                     
-                    &:hover {
+                    &:active {
                         transform: scale(1.5) rotate(360deg);
                         border: 2px solid $color-primary;
                         color: $color-primary;

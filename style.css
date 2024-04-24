@@ -289,7 +289,7 @@ main #projects div div {
   transition-property: all;
   transition-timing-function: linear;
 }
-main #projects div div:hover {
+main #projects div div:active {
   transform: scale(1.5) rotate(360deg);
   border: 2px solid #8A4FFF;
   color: #8A4FFF;
