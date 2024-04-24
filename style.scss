@@ -53,6 +53,12 @@ body {
         
         }
 
+        @media (min-width: 1024px) {
+            padding-left: 100px;
+            padding-right: 100px;
+            font-size: larger;
+        }
+
         nav { 
             width: 350px;
             display: flex;
@@ -122,6 +128,7 @@ body {
             justify-content: center;
             align-items: center;
             height: 100vh;
+            
         
             @media (min-width: 768px) {
                 flex-direction: row;
@@ -130,21 +137,33 @@ body {
 
 
             div {
-                width: 400px;
+                width: 300px;
                 display: flex;
                 flex-direction: column;
 
+                @media (min-width: 768px) {
+                    width: 400px;
+                }
+
+                @media (min-width: 1100px) {
+                    width: 600px;
+                }
+
                 h1 {
-                    font-size: 50px;
+                    font-size: 40px;
                     text-align: center;
 
                     span {
                         color: $color-primary;
                     }
+
+                    @media (min-width: 768px) {
+                        font-size: 70px;
+                    }
                 }
 
                 h2 {
-                    font-size: 30px;
+                    font-size: 20px;
                     text-align: center;
                     color: $color-secondary;
                     text-transform: uppercase;
@@ -152,6 +171,10 @@ body {
                     animation-duration: 5s;
                     animation-timing-function: ease-in-out;
                     animation-iteration-count: infinite;
+
+                    @media (min-width: 768px) {
+                        font-size: 50px;
+                    }
                 }
 
                 div {
@@ -187,26 +210,42 @@ body {
                     h3:nth-child(4) {
                         animation-delay: 2.5s;
                     }
-                    
+
                 }
 
             }
 
             img {
-                width: 400px;
-                height: 400px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
+
+                @media (min-width: 768px){
+                    width: 400px;
+                    height: 400px;
+                    
+                }
+
+                @media (min-width: 1024px) {
+                    width: 500px;
+                    height: 500px;
+                    
+                }
             }
         }
 
         #about {
-            width: 400px;
+            width: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 100vh;
             text-align: center;
             align-items: center;
+
+            @media (min-width: 768px) {
+                width: 500px;
+            }
 
             h1 {
                 font-size: 50px;
@@ -242,6 +281,23 @@ body {
 
             :nth-child(2) {
                 color: red;
+            }
+
+            div {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                div {
+                    height: 90px;
+                    width: 90px;
+                    backdrop-filter: blur(20px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid black;
+                    color: red;
+                }
             }
         }
 

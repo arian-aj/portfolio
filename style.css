@@ -46,6 +46,13 @@ body header {
     padding-right: 40px;
   }
 }
+@media (min-width: 1024px) {
+  body header {
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: larger;
+  }
+}
 body header nav {
   width: 350px;
   display: flex;
@@ -105,19 +112,34 @@ main #intro {
   }
 }
 main #intro div {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  main #intro div {
+    width: 400px;
+  }
+}
+@media (min-width: 1100px) {
+  main #intro div {
+    width: 600px;
+  }
+}
 main #intro div h1 {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
 }
 main #intro div h1 span {
   color: #8A4FFF;
 }
+@media (min-width: 768px) {
+  main #intro div h1 {
+    font-size: 70px;
+  }
+}
 main #intro div h2 {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   color: #94C5CC;
   text-transform: uppercase;
@@ -125,6 +147,11 @@ main #intro div h2 {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+}
+@media (min-width: 768px) {
+  main #intro div h2 {
+    font-size: 50px;
+  }
 }
 main #intro div div {
   display: flex;
@@ -155,18 +182,35 @@ main #intro div div h3:nth-child(4) {
   animation-delay: 2.5s;
 }
 main #intro img {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
+@media (min-width: 768px) {
+  main #intro img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  main #intro img {
+    width: 500px;
+    height: 500px;
+  }
+}
 main #about {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   text-align: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  main #about {
+    width: 500px;
+  }
 }
 main #about h1 {
   font-size: 50px;
@@ -195,6 +239,21 @@ main #projects h1 {
   margin: 40px;
 }
 main #projects :nth-child(2) {
+  color: red;
+}
+main #projects div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main #projects div div {
+  height: 90px;
+  width: 90px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
   color: red;
 }
 main #contacts {
