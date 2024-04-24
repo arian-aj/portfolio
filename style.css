@@ -202,7 +202,7 @@ main #intro img {
   }
 }
 main #about {
-  width: 300px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,20 +210,35 @@ main #about {
   text-align: center;
   align-items: center;
 }
-@media (min-width: 768px) {
-  main #about {
-    width: 500px;
-  }
-}
 main #about h1 {
   font-size: 50px;
   margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  main #about h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  main #about h1 {
+    font-size: 100px;
+  }
 }
 main #about h1 span {
   color: #8A4FFF;
 }
 main #about p {
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  main #about p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  main #about p {
+    font-size: 40px;
+  }
 }
 main #about p span {
   color: #8A4FFF;
@@ -235,11 +250,22 @@ main #projects {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 main #projects h1 {
   color: #8A4FFF;
-  font-size: 50px;
+  font-size: 40px;
   margin: 40px;
+}
+@media (min-width: 768px) {
+  main #projects h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  main #projects h1 {
+    font-size: 100px;
+  }
 }
 main #projects :nth-child(2) {
   color: red;
@@ -252,13 +278,33 @@ main #projects div {
 main #projects div div {
   height: 90px;
   width: 90px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
   color: red;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-timing-function: linear;
+}
+main #projects div div:hover {
+  transform: scale(1.5) rotate(360deg);
+  border: 2px solid #8A4FFF;
+  color: #8A4FFF;
+}
+@media (min-width: 768px) {
+  main #projects div div {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  main #projects div div {
+    height: 200px;
+    width: 200px;
+  }
 }
 main #contacts {
   display: flex;
@@ -266,7 +312,18 @@ main #contacts {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main #contacts {
+    font-size: larger;
+  }
+}
+@media (min-width: 1024px) {
+  main #contacts {
+    font-size: x-large;
+  }
 }
 main #contacts a {
   color: #8A4FFF;

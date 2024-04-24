@@ -238,7 +238,7 @@ body {
         }
 
         #about {
-            width: 300px;
+            width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -246,13 +246,18 @@ body {
             text-align: center;
             align-items: center;
 
-            @media (min-width: 768px) {
-                width: 500px;
-            }
 
             h1 {
                 font-size: 50px;
                 margin-bottom: 30px;
+
+                @media (min-width: 768px) {
+                    font-size: 70px;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 100px;
+                }
                 
                 span {
                     color: $color-primary;
@@ -261,6 +266,14 @@ body {
 
             p {
                 font-size: 20px;
+
+                @media (min-width: 768px) {
+                    font-size: 30px;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 40px;
+                }
 
                 span {
                     color: $color-primary;
@@ -275,11 +288,20 @@ body {
             justify-content: center;
             align-items: center;
             text-align: center;
+            width: 100%;
             
             h1 {
                 color: $color-primary;
-                font-size: 50px;
+                font-size: 40px;
                 margin: 40px;
+
+                @media (min-width: 768px) {
+                    font-size: 70px;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 100px;
+                }
             }
 
             :nth-child(2) {
@@ -294,13 +316,33 @@ body {
                 div {
                     height: 90px;
                     width: 90px;
-                    backdrop-filter: blur(20px);
-                    -webkit-backdrop-filter: blur(20px);
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border: 2px solid black;
                     color: red;
+                    transition-duration: 1s;
+                    transition-property: all;
+                    transition-timing-function: linear;
+                    
+                    &:hover {
+                        transform: scale(1.5) rotate(360deg);
+                        border: 2px solid $color-primary;
+                        color: $color-primary;
+                    
+                    }
+
+                    @media (min-width: 768px) {
+                        height: 150px;
+                        width: 150px;
+                    }
+
+                    @media (min-width: 1024px) {
+                        height: 200px;
+                        width: 200px;
+                    }
                 }
             }
         }
@@ -311,7 +353,17 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: left;
+            text-align: center;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                font-size: larger;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: x-large;
+                
+            }
 
             a {
                 color: $color-primary;
@@ -321,6 +373,7 @@ body {
                     border-bottom: 2px solid $color-primary;
                 }
             }
+
 
         }
     }
