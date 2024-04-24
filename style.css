@@ -81,6 +81,7 @@ body footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 body footer .fa-brands {
   color: #94C5CC;
